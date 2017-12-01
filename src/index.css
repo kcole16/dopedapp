@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #505559;
+}
+
+h1, h2, h3 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    height: 65px;
+    border-bottom: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0,0,0,.03);
+}
+
+.bg-faded {
+    background-color: #26282b;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #F79220;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #F79220;
+}
+
+a.navbar-brand:hover {
+    color: #F79220;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-main {
+    background-color: #F79220;
+    border-color: #F79220;
+    color: white;
+}
+
+.btn-main:hover {
+    background-color: #F79220;
+    border-color: #F79220;
+    color: white;
+}
+
+.search-bar {
+    width: 80%;
+}
+
+.search-results {
+    background-color: white;
+}
+
+.search-result {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border-top: 1px solid lightgray;
+}
+
+p {
+    margin: 0;
+}
+
+.search-result p {
+    margin-left: 10px;
+}
+
+.row .btn {
+    margin: 5px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.issue-description {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: white;
+    height: 150px;
+    width: 90%;
+}
+
+.issue-description p {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+i {
+  border: solid #505559;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+i:hover {
+    border: solid #F79220;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.comment-bar {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    z-index: 100;
+}
+
+.comment-bar textarea {
+    width: 280px;
+    height: 150px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: #505559;
+}
+
+.comment-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-top: 1px dotted lightgray;
+}
+
+.comment-buttons button {
+    margin-right: 10px;
+}
+
+div.comment-display.col {
+    max-width: 300px;
+    height: 1000px;
+    background-color: white;
+    border-right: 1px solid lightgray;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    border-radius: 3px;
+}
+
+.comment-text {
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.comment {
+    margin-top: 20px;
+}
+
+.comment-icon {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 100;
+    width: 20px;
+}
+
+.comment-icon:hover {
+    opacity: 1;
+}
+
+/*color-main: #F79220;
+color-secondary: #26282b;*/
