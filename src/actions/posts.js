@@ -84,10 +84,9 @@ export function createPost(id, content, pic) {
           web3.defaultAccount = accounts[0]
           post.setProvider(web3.currentProvider)
           post.deployed().then(function(instance) {
-            instance.addPost(id, content, pic, {from: web3.defaultAccount})
+            instance.addPost(id, pic, content, {from: web3.defaultAccount})
               .then((posts) => {
-                dispatch(getPosts(posts))
-                // return browserHistory.push('/viewTickets')
+                return browserHistory.push('/')
               })
             })
             .catch((result) => {
@@ -100,18 +99,13 @@ export function createPost(id, content, pic) {
   }
 }
 
-// export function createPost(ticket) {
-//   const route = '/createTicket'
-//   const payload = {
-//     ticket: ticket
-//   }
-//   const req = generateRequest('POST', route, payload)
-//   return dispatch => {
-//     return fetchResponse(req, dispatch, route)
-//     .then((json) => dispatch(createPaymentContract(json.ticket)))
-//     .then(() => alert('Ticket submitted'))
-//     .then(() => dispatch(fetchTickets(ticket.userAddress)))
-//     .then(() => browserHistory.push('/viewTickets'))
-//     .catch(err => console.log(err))
-//   }
-// }
+export function fetchPosts() {
+  const route = '/getPosts'
+  const req = generateRequest('GET', route)
+  return dispatch => {
+    return fetchResponse(req, dispatch, route)
+    .then((json) => dispatch(getPosts(json.posts)))
+    .catch(err => console.log(err))
+  }
+}
+

@@ -19,8 +19,9 @@ class App extends Component {
       <div className="App">
 
         <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-          <Link className="navbar-brand" to="/dashboard">DopeDapp</Link>
+          <Link className="navbar-brand" to="/">DopeDapp</Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <Link to="/createPost">Create Post</Link>
           </div>
         </nav>
 

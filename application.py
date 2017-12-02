@@ -1,4 +1,4 @@
-from flask import render_template, jsonify, request
+from flask import render_template, jsonify, request, Flask
 from flask_cors import CORS
 from whitenoise import WhiteNoise
 from dateutil import parser
@@ -7,10 +7,9 @@ from pymongo import MongoClient
 
 from settings import PRODUCTION, APP_SECRET
 
-
+application = Flask(__name__)
 application.debug = True
 application.config['SECRET_KEY'] = APP_SECRET
-db = db
 cors = CORS(application)
 static = WhiteNoise(application, root='../static/')
 

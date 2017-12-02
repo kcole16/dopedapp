@@ -7,7 +7,8 @@ import getWeb3 from './util/web3/getWeb3'
 
 // Layouts
 import App from './App'
-import Home from './layouts/Home/Home'
+import Posts from './layouts/Posts/Posts'
+import CreatePost from './layouts/CreatePost/CreatePost'
 
 // Redux Store
 import store from './store'
@@ -28,7 +29,8 @@ ReactDOM.render((
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={App}>
-          <IndexRoute component={Home} />
+          <IndexRoute component={Posts} />
+          <Route path="createPost" component={CreatePost} />
         </Route>
       </Router>
     </Provider>

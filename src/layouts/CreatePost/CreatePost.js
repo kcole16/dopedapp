@@ -18,6 +18,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     const {state, actions} = this.props
+    actions.fetchPosts()
     // setTimeout(() => actions.retrievePosts(), 2000)
   }
 

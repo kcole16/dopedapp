@@ -4,12 +4,12 @@ import './zeppelin/ownership/Ownable.sol';
 
 contract Post is Ownable {
     
-    event PostCreated(bytes32 id, bytes32 pictureHash, bytes32 contentHash, address creator);
+    event PostCreated(bytes32 id, string pictureHash, string contentHash, address creator);
 
     struct Post {
         bytes32 id;
-        bytes32 pictureHash;
-        bytes32 contentHash;
+        string pictureHash;
+        string contentHash;
         address creator;
     }
 
@@ -17,7 +17,7 @@ contract Post is Ownable {
 
     mapping (bytes32 => Post) public postMap;
     
-    function addPost(bytes32 _id, bytes32 _pictureHash, bytes32 _contentHash) returns (bool) {
+    function addPost(bytes32 _id, string _pictureHash, string _contentHash) returns (bool) {
         Post storage post;
         post.id = _id;
         post.pictureHash = _pictureHash;
@@ -28,9 +28,9 @@ contract Post is Ownable {
         return true;
     }
     
-    function getPost(bytes32 _id) constant returns (bytes32, bytes32, address) {
-        return (postMap[_id].pictureHash, postMap[_id].contentHash, postMap[_id].creator);
-    }
+    // function getPost(bytes32 _id) constant returns (string, string, address) {
+    //     return (postMap[_id].pictureHash, postMap[_id].contentHash, postMap[_id].creator);
+    // }
     
     function() payable {
         revert();
