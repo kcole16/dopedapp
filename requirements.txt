@@ -14,7 +14,7 @@ ethereum-keys==0.1.0a7
 ethereum-tester==0.1.0b2
 ethereum-utils==0.6.0
 Flask==0.12.2
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-Migrate==2.1.1
 Flask-SQLAlchemy==2.2
 gunicorn==19.7.1
